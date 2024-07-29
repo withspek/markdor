@@ -7,7 +7,7 @@ and extensibility.
 
 Most markdown-like parsers aim for [speed][marked] or
 [edge case handling][CommonMark].
-simple-markdown aims for extensibility and simplicity.
+markdor aims for extensibility and simplicity.
 
 [marked]: https://github.com/chjj/marked
 [CommonMark]: https://github.com/jgm/CommonMark
