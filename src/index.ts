@@ -290,10 +290,7 @@ var parserFor = function (
       typeof console !== "undefined"
     ) {
       console.warn(
-        "simple-markdown: Invalid order for rule `" +
-          type +
-          "`: " +
-          String(order)
+        "markdor: Invalid order for rule `" + type + "`: " + String(order)
       );
     }
     return true;
@@ -875,7 +872,7 @@ var outputFor = function <Rule>(
 ) {
   if (!property) {
     throw new Error(
-      "simple-markdown: outputFor: `property` must be " +
+      "markdor: outputFor: `property` must be " +
         "defined. " +
         "if you just upgraded, you probably need to replace `outputFor` " +
         "with `reactFor`"
@@ -889,7 +886,7 @@ var outputFor = function <Rule>(
   var arrayRuleCheck = arrayRule[property];
   if (!arrayRuleCheck) {
     throw new Error(
-      "simple-markdown: outputFor: to join nodes of type `" +
+      "markdor: outputFor: to join nodes of type `" +
         // @ts-expect-error - TS2469 - The '+' operator cannot be applied to type 'symbol'.
         property +
         "` you must provide an `Array:` joiner rule with that type, " +
@@ -1212,7 +1209,7 @@ var defaultRules: DefaultRules = {
     order: currOrder++,
     // TODO(aria): This will match without a blank line before the next
     // block element, which is inconsistent with most of the rest of
-    // simple-markdown.
+    // markdor.
     match: blockRegex(
       /^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/
     ),
@@ -1729,7 +1726,7 @@ var ruleOutput = function <Rule>(
 ) {
   if (!property && typeof console !== "undefined") {
     console.warn(
-      "simple-markdown ruleOutput should take 'react' or " +
+      "markdor ruleOutput should take 'react' or " +
         "'html' as the second argument."
     );
   }

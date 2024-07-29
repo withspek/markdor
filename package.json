@@ -1,19 +1,20 @@
 {
   "name": "@withspek/markdor",
   "description": "Javascript markdown parsing",
-  "author": "SpekLABS",
+  "author": "withspek",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.14.0",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/withspeck/markdor.git",
+    "url": "https://github.com/withspek/markdor.git",
     "directory": "packages/simple-markdown"
   },
   "bugs": {
-    "url": "https://github.com/withspeck/markdor/issues"
+    "url": "https://github.com/withspek/markdor/issues"
   },
   "module": "lib/index.js",
   "main": "lib/index.js",
