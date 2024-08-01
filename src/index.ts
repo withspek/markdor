@@ -519,7 +519,7 @@ var reactElement = function (
 ): ReactElement {
   var element: ReactElement = {
     $$typeof: TYPE_SYMBOL,
-    typ: type,
+    type: type,
     key: key == null ? undefined : key,
     ref: null,
     props: props,
