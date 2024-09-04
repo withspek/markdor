@@ -1812,6 +1812,15 @@ type Exports = {
     rules: ParserRules,
     defaultState?: State | null | undefined
   ) => Parser;
+  readonly outputFor: <Rule>(
+    rules: OutputRules<Rule>,
+    param: keyof Rule,
+    defaultState?: State | null | undefined
+  ) => Output<any>;
+  readonly ruleOutput: <Rule>(
+    rules: OutputRules<Rule>,
+    param: keyof Rule
+  ) => NodeOutput<any>;
   readonly inlineRegex: (regex: RegExp) => MatchFunction;
   readonly blockRegex: (regex: RegExp) => MatchFunction;
   readonly anyScopeRegex: (regex: RegExp) => MatchFunction;
@@ -1924,6 +1933,8 @@ export type {
 var Markdor: Exports = {
   defaultRules: defaultRules,
   parserFor: parserFor,
+  outputFor: outputFor,
+  ruleOutput: ruleOutput,
   defaultRawParse: defaultRawParse,
 
   inlineRegex: inlineRegex,
